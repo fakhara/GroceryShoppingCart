@@ -60,6 +60,8 @@ namespace GroceryShoppingCart.Models
 
         [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
+        public object GuestAcct { get; internal set; }
+        public object GuestPassword { get; internal set; }
     }
 
     public class RegisterViewModel

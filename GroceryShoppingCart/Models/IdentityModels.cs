@@ -9,6 +9,8 @@ namespace GroceryShoppingCart.Models
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
+        
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -24,6 +26,19 @@ namespace GroceryShoppingCart.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Cart> Carts { get; set; }
+        public DbSet<Catagory> Catagories { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+       
+
+        //static ApplicationDbContext()
+        //{
+        //    // Set the database intializer which is run once during application start
+        //    // This seeds the database with admin user credentials and admin role
+        //    Database.SetInitializer<ApplicationDbContext>(new ApplicationDbInitializer());
+        //}
 
         public static ApplicationDbContext Create()
         {

@@ -15,16 +15,10 @@ namespace GroceryShoppingCart.Controllers
            
             return View(db.Products.ToList());
         }
-        public ActionResult EachProductDetails(Product p)
+        public ActionResult EachProductDetails(int id)
         {
-            List<Product> list = new List<Product>();
-             foreach( var item in list)
-             {
-                Product product = new Product();
-             }
-           
-
-            return View(db.Products.ToList());
+            var product = db.Products.SingleOrDefault(i => i.Id == id);
+            return View(product);
         }
 
         public ActionResult About()

@@ -18,10 +18,10 @@
                 <h4><span id="productname" style="color:darkred">@item.Name</span></h4>
                 <p><span class="glyphicon glyphicon-heart" style="color:red;pointer-events:fill;" contextmenu="Added to WishList"></span></p>
             </div>
-           <a href="@Url.Action("EachProductDetails", "Home", item)">
+           <a href="@Url.Action("EachProductDetails", "Home", new {id = item.Id })">
            <img class="a.photo" src="~/Images/Uploads/Products//@item.Id/Thumbs/@item.ImageName" style="overflow:hidden;position:relative;width:200px;height:200px;cursor:pointer" />
            </a>
-           <p><a class="btn btn-default" href="">View More &raquo;</a></p>
+           <p><a class="btn btn-default" href="">ProductDetails &raquo;</a></p>
            <p><span class="glyphicon glyphicon-shopping-cart" style="color:green"></span></p>
          }
         </div>

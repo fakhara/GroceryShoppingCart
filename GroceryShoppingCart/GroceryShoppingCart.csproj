@@ -1077,6 +1077,7 @@
     <Content Include="Views\Products\EditProduct.cshtml" />
     <Content Include="Views\ShoppingCart\ShowCart.cshtml" />
     <Content Include="Views\Home\EachProductDetails.cshtml" />
+    <Content Include="Views\ShoppingCart\MyOrder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

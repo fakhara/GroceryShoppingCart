@@ -25,8 +25,8 @@ namespace GroceryShoppingCart.Controllers
             }
             //get infor product
             var itemproduct = db.Products.Where(p => p.Id == id).First();
-            ////cart.(itemproduct);
-            return RedirectToAction("ShowCart", "ShoppingCart");
+            //cart.(itemproduct);
+            return RedirectToAction("Index", "Home");
         }
         public ActionResult ShowCart()
         {
@@ -34,6 +34,10 @@ namespace GroceryShoppingCart.Controllers
                 return RedirectToAction("ShowProduct", "ShoppingCart");
             Cart cart = Session["Cart"] as Cart;
             return View(cart);
+        }
+        public ActionResult MyOrder()
+        {
+            return View((Cart)Session["Cart"]);
         }
 
     }

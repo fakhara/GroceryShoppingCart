@@ -10,8 +10,8 @@ namespace GroceryShoppingCart.Models
     public class Cart
     {
         [Key]
-        public int RecordId { get; set; }
-        public int CartId { get; set; }
+        public int ID { get; set; }
+        public String CartId { get; set; }
         [ForeignKey("Product")]
         public int ProductId { get; set; }
         public int Count { get; set; }

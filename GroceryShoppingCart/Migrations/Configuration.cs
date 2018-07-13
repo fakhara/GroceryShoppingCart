@@ -34,8 +34,7 @@ namespace GroceryShoppingCart.Migrations
 
             roleManager.Create(new IdentityRole { Name = "Admin" });
             userManager.AddToRole(user.Id, "Admin");
-            roleManager.Create(new IdentityRole { Name = "Guest" });
-            userManager.AddToRole(guestUser.Id, "Guest");
+           
         }
     }
 }

@@ -10,35 +10,78 @@ namespace GroceryShoppingCart.Controllers
     public class ShoppingCartController : Controller
     {
         ApplicationDbContext db = new ApplicationDbContext();
+        string ShoppingCartId { get; set; }
+
         // GET: ShoppingCart
-        public ActionResult Index()
+        
+        public ActionResult Add(Product product)
         {
-            return View();
-        }
-        public ActionResult Add(int id)
-        {
-            Cart cart = Session["Cart"] as Cart;
-            if(cart == null || Session["Cart"] == null)
+           
+            product = db.Products.Find(product.Id);
+            
+
+            if (Session["cart"] == null)
             {
-                cart = new Cart();
-                Session["Cart"] = cart;
+                List<Product> li = new List<Product>();
+                li.Add(product);
+                Session["cart"] = li;
+                ViewBag.cart = li.Count();
+
+                Session["count"] = 1;
             }
-            //get infor product
-            var itemproduct = db.Products.Where(p => p.Id == id).First();
-            //cart.(itemproduct);
-            return RedirectToAction("Index", "Home");
+            else
+            {
+                List<Product> li = (List<Product>)Session["cart"];
+                li.Add(product);
+                Session["cart"] = li;
+                ViewBag.cart = li.Count();
+                Session["count"] = Convert.ToInt32(Session["count"]) + 1;
+            }
+            return RedirectToAction("Index", "Products");
         }
-        public ActionResult ShowCart()
+        public ActionResult MyCart()
         {
-            if (Session["Cart"] == null)
-                return RedirectToAction("ShowProduct", "ShoppingCart");
-            Cart cart = Session["Cart"] as Cart;
-            return View(cart);
-        }
-        public ActionResult MyOrder()
-        {
-            return View((Cart)Session["Cart"]);
+
+            return View((List<Product>)Session["cart"]);
+
         }
 
+        public ActionResult Remove(Product product)
+        {
+            List<Product> li = (List<Product>)Session["cart"];
+            li.RemoveAll(x => x.Id == product.Id);
+            Session["cart"] = li;
+            Session["count"] = Convert.ToInt32(Session["count"]) - 1;
+            return RedirectToAction("Myorder", "ShoppingCart");
+        }
+        public List<Cart> GetCartitems()
+        {
+            return db.Carts.Where(cart => cart.CartId  == ShoppingCartId).ToList();
+        }
+        public Order CreateOrder(Order order)
+        {
+            decimal orderTotal = 0;
+            order.OrderDetails = new List<OrderDetail>();
+
+            var cartItems = GetCartitems();
+            foreach(var item in cartItems)
+            {
+                var orderDetail = new OrderDetail
+                {
+                    ProductId = item.ProductId,
+                    OrderId = order.OrderId,
+                    Price = item.Product.Price,
+                    Quantity = item.Count
+                };
+                orderTotal += (item.Count * item.Product.Price);
+                order.OrderDetails.Add(orderDetail);
+                db.OrderDetails.Add(orderDetail);
+            }
+            //set the order's total to the orderTotal count
+            order.TotalMoney = orderTotal;
+            db.SaveChanges();
+            return order;
+        }
+        
     }
 }

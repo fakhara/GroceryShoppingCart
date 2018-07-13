@@ -12,7 +12,23 @@ namespace GroceryShoppingCart.Controllers
 {
     public class ProductsController : Controller
     {
-         //Get: Products/AddProduct
+        //Get:Product/Index
+        public ActionResult Index()
+        {
+            using (ApplicationDbContext db = new ApplicationDbContext())
+            {
+                return View(db.Products.ToList());
+            }
+        }
+        public ActionResult EachProductDetails(int id)
+        {
+            using (ApplicationDbContext db = new ApplicationDbContext())
+            {
+                var product = db.Products.SingleOrDefault(i => i.Id == id);
+                return View(product);
+            }
+        }
+        //Get: Products/AddProduct
         [HttpGet]
         [Authorize(Roles = "Admin")]
         public ActionResult AddProduct()

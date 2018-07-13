@@ -1,0 +1,28 @@
+﻿@model IEnumerable<GroceryShoppingCart.Models.Product>
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<h2>Product  Detailes</h2>
+@if (Model != null)
+{
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <h4><span id="productname" style="color:darkred">@item.Name</span></h4>
+                <p><span class="glyphicon glyphicon-heart" style="color:red;pointer-events:fill;" contextmenu="Added to WishList"></span></p>
+            </div>
+            <a href="@Url.Action("EachProductDetails", "Products", new {id = item.Id })">
+                <img class="a.photo" src="~/Images/Uploads/Products//@item.Id/Thumbs/@item.ImageName" style="overflow:hidden;position:relative;width:200px;height:200px;cursor:pointer" />
+            </a>
+            <p><a class="btn btn-default" href="">ProductDetails &raquo;</a></p>
+            <p><span class="glyphicon glyphicon-shopping-cart" style="color:green"></span></p>
+        }
+    </div>
+}

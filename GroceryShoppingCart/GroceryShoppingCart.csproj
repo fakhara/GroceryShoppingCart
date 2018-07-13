@@ -199,6 +199,7 @@
     <Compile Include="Controllers\CatagoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Global.asax.cs">
@@ -221,6 +222,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\image\delete.png" />
+    <Content Include="Content\image\footer.png" />
+    <Content Include="Content\image\header.png" />
+    <Content Include="Content\image\header1.png" />
     <Content Include="Content\image\loading1.png" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
@@ -1075,9 +1080,14 @@
     <Content Include="Views\Products\Products.cshtml" />
     <Content Include="Views\Products\AddProduct.cshtml" />
     <Content Include="Views\Products\EditProduct.cshtml" />
-    <Content Include="Views\ShoppingCart\ShowCart.cshtml" />
-    <Content Include="Views\Home\EachProductDetails.cshtml" />
-    <Content Include="Views\ShoppingCart\MyOrder.cshtml" />
+    <Content Include="Views\Orders\Index.cshtml" />
+    <Content Include="Views\Orders\Details.cshtml" />
+    <Content Include="Views\Orders\Create.cshtml" />
+    <Content Include="Views\Orders\Edit.cshtml" />
+    <Content Include="Views\Orders\Delete.cshtml" />
+    <Content Include="Views\ShoppingCart\MyCart.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Products\EachProductDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

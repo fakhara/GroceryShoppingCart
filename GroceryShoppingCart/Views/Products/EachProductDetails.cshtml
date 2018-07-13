@@ -1,0 +1,36 @@
+﻿@model GroceryShoppingCart.Models.Product
+@{
+    ViewBag.Title = "EachProductDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<h2>Product Specification</h2>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">@Model.Name</div>
+    <div class="panel-body">
+        <div class="col-sm-3 col-md-6" style="color:blue">
+            <img src="~/Images/Uploads/Products//@Model.Id/Thumbs/@Model.ImageName" width="400" height="400" />
+        </div>
+        <div class="col-sm-9 col-md-6">
+            <h3><span id="productname" style="color:black"><b>ProductName</b></span></h3>
+            <h6><span id="productname" style="color:black">@Model.Name</span></h6>
+            <h3><span id="productname" style="color:black"><b>Description</b></span></h3>
+            <h6><span id="productname" style="color:black">@Model.Description</span></h6>
+            <h3><span id="productname" style="color:black"><b>Price</b></span></h3>
+            <h6><span id="productname" style="color:black">@Model.Price</span></h6>
+
+            <a id="btn_add" href="@Url.Action("Add","ShoppingCart",new { id = Model.Id},"")" class="btn btn-info btn-lg" style="margin-left:60px ">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart
+            </a>
+            <a id="btn_add" href="@Url.Action("Index", "Product")" class="btn btn-info btn-lg" style="margin-left:60px">
+        <span class="glyphicon glyphicon-eye-open"></span> Continue shopping</a>
+        </div>
+    </div>
+</div>
+

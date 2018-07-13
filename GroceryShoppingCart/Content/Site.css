@@ -70,3 +70,42 @@ table.sorting.categories td {
 .ajaxdivtd {
     position: absolute;
 }
+.label {
+    font-size: 10pt;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.contents {
+    border: 1px dotted black;
+    padding: 5px;
+    width: 300px;
+}
+
+.name {
+    color: #18B5F0;
+}
+
+.left {
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+
+.right {
+    margin-left: 60px;
+    line-height: 50px;
+}
+
+.clear {
+    clear: both;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0px;
+    height: 3px;
+    background-color: #666;
+    color: #eee;
+    width: 100%
+}

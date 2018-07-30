@@ -1,28 +1,149 @@
-﻿@model IEnumerable<GroceryShoppingCart.Models.Product>
-@{
-    ViewBag.Title = "Home Page";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-
+﻿@{
+    ViewBag.Title = "Welcome";
 }
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<h2>Product  Detailes</h2>
-@if (Model != null)
-{
-
-    <div class="row">
-        @foreach (var item in Model)
-        {
-            <div class="col-md-4">
-                <h4><span id="productname" style="color:darkred">@item.Name</span></h4>
-                <p><span class="glyphicon glyphicon-heart" style="color:red;pointer-events:fill;" contextmenu="Added to WishList"></span></p>
+<div class="container">
+    <div id="myCarousel" class="carousel slider" data-ride="carousel">
+        <!--Indicators-->
+        <ul class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide="1"></li>
+            <li data-target="#myCarousel" data-slide="2"></li>
+            <li data-target="#myCarousel" data-slide="3"></li>
+            <li data-target="#myCarousel" data-slide="4"></li>
+            <li data-target="#myCarousel" data-slide="5"></li>
+            <li data-target="#myCarousel" data-slide="6"></li>
+            <li data-target="#myCarousel" data-slide="7"></li>
+            <li data-target="#myCarousel" data-slide="8"></li>
+            <li data-target="#myCarousel" data-slide="9"></li>
+        </ul>
+        <!--Wrapper for slide-->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="~/Content/image/foodGrocery.png" alt="Food & Grocery" style="width:100%" />
             </div>
-           <a href="@Url.Action("EachProductDetails", "Home", new {id = item.Id })">
-           <img class="a.photo" src="~/Images/Uploads/Products//@item.Id/Thumbs/@item.ImageName" style="overflow:hidden;position:relative;width:200px;height:200px;cursor:pointer" />
-           </a>
-           <p><a class="btn btn-default" href="">ProductDetails &raquo;</a></p>
-           <p><span class="glyphicon glyphicon-shopping-cart" style="color:green"></span></p>
-         }
+            <div class="item">
+                <img src="~/Content/image/Beverage.png" alt="Beverage" style="width:100%" />
+            </div>
+            <div class="item">
+                <img src="~/Content/image/bread.png" alt="Bread & Bakrey" style="width:100%" />
+            </div>
+            <div class="item">
+                <img src="~/Content/image/dairyproducts.png" alt="Dairy Products" style="width:100%" />
+            </div>
+            <div class="item">
+                <img src="~/Content/image/dryfruit.png" alt="Dry Products" style="width:100%" />
+            </div>
+            <div class="item">
+                <img src="~/Content/image/frozenfood.png" alt="Frozen/Produced Products" style="width:100%" />
+            </div>
+            <div class="item">
+                <img src="~/Content/image/clearner.png" alt="Cleaner" style="width:100%" />
+            </div> 
+            <div class="item">
+                <img src="~/Content/image/personalCare.png" alt="Personal Care" style="width:100%" />
+            </div>
+            <div class="item">
+                <img src="~/Content/image/fruitvegetables.png" alt="Fruit & Vegetables" style="width:100%" />
+            </div>
+            <div class="item">
+                <img src="~/Content/image/babycareProducts.png" alt="Baby Care" style="width:100%" />
+            </div>
         </div>
- }
+        <!--Left and right controls-->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<br />
+
+<h3 class="text-center">Click on a category below to get started</h3>
+<br />
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="categorywrap">
+            <a href="~/StoreFront/Index/1">
+                <h2>Food & Grocery</h2>
+                <img src="~/Content/image/Food&Grcoeryicon.png" alt="" style="overflow:hidden;position:relative;width:200px;height:200px;cursor:pointer"/>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="categorywrap">
+            <a href="~/StoreFront/Index/2">
+                <h2>Beverages</h2>
+                <img src="~/Content/image/beverages.png" alt="" style="overflow:hidden;position:relative;width:200px;height:200px;cursor:pointer"/>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="categorywrap">
+            <a href="~/StoreFront/Index/3">
+                <h2>Bread & Bakery</h2>
+                <img src="~/Content/image/breadBakrey.png" alt="" style="overflow:hidden;position:relative;width:200px;height:200px;cursor:pointer"/>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="categorywraplast">
+            <a href="~/StoreFront/Index/4">
+                <h2>Dairy Products</h2>
+                <img src="~/Content/image/dairyProductsicon.png" alt=""style="overflow:hidden;position:relative;width:200px;height:200px;cursor:pointer" />
+            </a>
+        </div>
+     </div>
+        <div class="col-md-3">
+            <div class="categorywrap">
+                <a href="~/StoreFront/Index/5">
+                    <h2>Dry Products</h2>
+                    <img src="~/Content/image/Dryproducticon.png" alt=""style="overflow:hidden;position:relative;width:200px;height:200px;cursor:pointer" />
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="categorywrap">
+                <a href="~/StoreFront/Index/6">
+                    <h2>Frozen/Produced Products</h2>
+                    <img src="~/Content/image/frozenfoodIcon.png" alt="" style="overflow:hidden;position:relative;width:200px;height:200px;cursor:pointer"/>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="categorywrap">
+                <a href="~/StoreFront/Index/7">
+                    <h2>Cleaner</h2>
+                    <img src="~/Content/image/cleanerIcon.png" alt="" style="overflow:hidden;position:relative;width:200px;height:200px;cursor:pointer"/>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="categorywrap">
+                <a href="~/StoreFront/Index/8">
+                    <h2>Personal Care</h2>
+                    <img src="~/Content/image/personalcareIcon.png" alt="" style="overflow:hidden;position:relative;width:200px;height:200px;cursor:pointer"/>
+                </a>
+            </div>
+          </div>
+            <div class="col-md-3">
+                <div class="categorywrap">
+                    <a href="~/StoreFront/Index/9">
+                        <h2>Fruit & Vegetables</h2>
+                        <img src="~/Content/image/FruitVegetablesIcon.png" alt="" style="overflow:hidden;position:relative;width:200px;height:200px;cursor:pointer"/>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="categorywraplast">
+                    <a href="~/StoreFront/Index/10">
+                        <h2>Baby Products</h2>
+                        <img src="~/Content/image/babycareicon.png" alt="" style="overflow:hidden;position:relative;width:200px;height:200px;cursor:pointer"/>
+                    </a>
+                </div>
+            </div>
+        </div>

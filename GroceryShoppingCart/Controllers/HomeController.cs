@@ -12,15 +12,8 @@ namespace GroceryShoppingCart.Controllers
         ApplicationDbContext db = new ApplicationDbContext();
         public ActionResult Index()
         {
-           
-            return View(db.Products.ToList());
+             return View();
         }
-        public ActionResult EachProductDetails(int id)
-        {
-            var product = db.Products.SingleOrDefault(i => i.Id == id);
-            return View(product);
-        }
-
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

@@ -196,11 +196,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AddToCartController.cs" />
     <Compile Include="Controllers\CatagoriesController.cs" />
+    <Compile Include="Controllers\CheckOutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
-    <Compile Include="Controllers\ShoppingCartController.cs" />
+    <Compile Include="Controllers\StoreFrontController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -213,15 +216,43 @@
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\ShoppingCartRemoveViewModel.cs" />
+    <Compile Include="ViewModel\ShoppingCartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\image\babycareicon.png" />
+    <Content Include="Content\image\babycareProducts.png" />
+    <Content Include="Content\image\Beverage.png" />
+    <Content Include="Content\image\beverages.png" />
+    <Content Include="Content\image\bread.png" />
+    <Content Include="Content\image\breadBakrey.png" />
+    <Content Include="Content\image\cleanerIcon.png" />
+    <Content Include="Content\image\clearner.png" />
+    <Content Include="Content\image\dairyproducts.png" />
+    <Content Include="Content\image\dairyProductsicon.png" />
+    <Content Include="Content\image\delete.png" />
+    <Content Include="Content\image\dryfruit.png" />
+    <Content Include="Content\image\Dryproducticon.png" />
+    <Content Include="Content\image\Food&amp;Grcoeryicon.png" />
+    <Content Include="Content\image\foodGrocery.png" />
+    <Content Include="Content\image\footer.png" />
+    <Content Include="Content\image\frozenfood.png" />
+    <Content Include="Content\image\frozenfoodIcon.png" />
+    <Content Include="Content\image\fruitvegetables.png" />
+    <Content Include="Content\image\FruitVegetablesIcon.png" />
+    <Content Include="Content\image\header.png" />
+    <Content Include="Content\image\header1.png" />
     <Content Include="Content\image\loading1.png" />
+    <Content Include="Content\image\personalCare.png" />
+    <Content Include="Content\image\personalcareIcon.png" />
+    <Content Include="Content\image\shoping_cart.png" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -1075,9 +1106,17 @@
     <Content Include="Views\Products\Products.cshtml" />
     <Content Include="Views\Products\AddProduct.cshtml" />
     <Content Include="Views\Products\EditProduct.cshtml" />
-    <Content Include="Views\ShoppingCart\ShowCart.cshtml" />
-    <Content Include="Views\Home\EachProductDetails.cshtml" />
-    <Content Include="Views\ShoppingCart\MyOrder.cshtml" />
+    <Content Include="Views\Orders\Index.cshtml" />
+    <Content Include="Views\Orders\Details.cshtml" />
+    <Content Include="Views\Orders\Create.cshtml" />
+    <Content Include="Views\Orders\Edit.cshtml" />
+    <Content Include="Views\Orders\Delete.cshtml" />
+    <Content Include="Views\Products\EachProductDetails.cshtml" />
+    <Content Include="Views\StoreFront\Index.cshtml" />
+    <Content Include="Views\AddToCart\Index.cshtml" />
+    <Content Include="Views\AddToCart\CartSummary.cshtml" />
+    <Content Include="Views\CheckOut\AddressAndPayment.cshtml" />
+    <Content Include="Views\CheckOut\Complete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

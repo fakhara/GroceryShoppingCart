@@ -25,19 +25,12 @@
             <h3><span id="productname" style="color:black"><b>Price</b></span></h3>
             <h6><span id="productname" style="color:black">@Model.Price</span></h6>
 
-<<<<<<< HEAD
-            <a id="btn_add" href="@Url.Action("Add","AddToCart",new { id = Model.Id},"")" class="btn btn-info btn-lg" style="margin-left:60px ">
+            <a id="btn_add" href="@Url.Action("Add","AddToCart", new { id= Model.Id} ,"")" class="btn btn-info btn-lg" style="margin-left:60px ">
                 <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart
             </a>
-            <a id="btn_add" href="@Url.Action("Index", "StoreFront")" class="btn btn-info btn-lg" style="margin-left:60px">
-=======
-            <a id="btn_add" href="@Url.Action("Add","ShoppingCart",new { id = Model.Id},"")" class="btn btn-info btn-lg" style="margin-left:60px ">
-                <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart
+            <a id="btn_add" href="@Url.Action("Index","StoreFront")" class="btn btn-info btn-lg" style="margin-left:60px">
+                <span class="glyphicon glyphicon-eye-open"></span> Continue shopping
             </a>
-            <a id="btn_add" href="@Url.Action("Index", "Product")" class="btn btn-info btn-lg" style="margin-left:60px">
->>>>>>> bc0854a3c9fb5ead10f74bf7c09d9bc7b1eaa3fc
-        <span class="glyphicon glyphicon-eye-open"></span> Continue shopping</a>
         </div>
     </div>
 </div>
-

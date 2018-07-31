@@ -52,6 +52,7 @@ namespace GroceryShoppingCart.Controllers
             int pageSize = 3;
             int pageNumber = (page ?? 1);
             return View(orders.ToPagedList(pageNumber,pageSize));
+            //return View(await db.Orders.ToListAsync());
         }
         public async Task<ActionResult> Details(int? id)
         {
@@ -106,10 +107,11 @@ namespace GroceryShoppingCart.Controllers
         // POST: Orders/Edit/id
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(Order order)
+        public async Task<ActionResult> Edit(Order order, int id)
         {
             if (ModelState.IsValid)
             {
+                order.OrderId = id;
                 db.Entry(order).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");

@@ -10,23 +10,12 @@ namespace GroceryShoppingCart.Controllers
     public class HomeController : Controller
     {
         ApplicationDbContext db = new ApplicationDbContext();
-        public ActionResult Index(string catagory)
+        public ActionResult Index()
         {
-<<<<<<< HEAD
+
              return View();
         }
-=======
-            var catagoryModel = db.Catagories.Include("Products").Single(c => c.Name == catagory);
-            return View(catagoryModel);
-        }
-        
-        public ActionResult Details(int id)
-        {
-            var Item = new Product { Name = "Product" + id };
-            return View(Item);
-        }
 
->>>>>>> bc0854a3c9fb5ead10f74bf7c09d9bc7b1eaa3fc
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

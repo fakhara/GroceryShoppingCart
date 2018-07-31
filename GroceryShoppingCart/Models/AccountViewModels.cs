@@ -3,31 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace GroceryShoppingCart.Models
 {
-<<<<<<< HEAD
-    //public class GuestViewModel
-    //{
-    //    [Required]
-    //    [Display(Name = "Email")]
-    //    public string GuestAcct { get; set; }
 
-    //    [Required]
-    //    [Display(Name = "Password")]
-    //    public string GuestPassword { get; set; }
-
-    //}
-=======
-    public class GuestViewModel
-    {
-        [Required]
-        [Display(Name = "Email")]
-        public string GuestAcct { get; set; }
-
-        [Required]
-        [Display(Name = "Password")]
-        public string GuestPassword { get; set; }
-
-    }
->>>>>>> bc0854a3c9fb5ead10f74bf7c09d9bc7b1eaa3fc
     public class ExternalLoginConfirmationViewModel
     {
         [Required]

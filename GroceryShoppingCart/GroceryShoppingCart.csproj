@@ -227,7 +227,6 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-<<<<<<< HEAD
     <Content Include="Content\image\babycareicon.png" />
     <Content Include="Content\image\babycareProducts.png" />
     <Content Include="Content\image\Beverage.png" />
@@ -243,21 +242,18 @@
     <Content Include="Content\image\Dryproducticon.png" />
     <Content Include="Content\image\Food&amp;Grcoeryicon.png" />
     <Content Include="Content\image\foodGrocery.png" />
-    <Content Include="Content\image\footer.png" />
     <Content Include="Content\image\frozenfood.png" />
     <Content Include="Content\image\frozenfoodIcon.png" />
+    <Content Include="Content\image\frozenicon.png" />
     <Content Include="Content\image\fruitvegetables.png" />
     <Content Include="Content\image\FruitVegetablesIcon.png" />
-=======
     <Content Include="Content\image\delete.png" />
-    <Content Include="Content\image\footer.png" />
->>>>>>> bc0854a3c9fb5ead10f74bf7c09d9bc7b1eaa3fc
-    <Content Include="Content\image\header.png" />
-    <Content Include="Content\image\header1.png" />
     <Content Include="Content\image\loading1.png" />
     <Content Include="Content\image\personalCare.png" />
     <Content Include="Content\image\personalcareIcon.png" />
+    <Content Include="Content\image\seasoningsspices.png" />
     <Content Include="Content\image\shoping_cart.png" />
+    <Content Include="Content\image\spicesicon.png" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -1116,18 +1112,12 @@
     <Content Include="Views\Orders\Create.cshtml" />
     <Content Include="Views\Orders\Edit.cshtml" />
     <Content Include="Views\Orders\Delete.cshtml" />
-<<<<<<< HEAD
-    <Content Include="Views\Products\EachProductDetails.cshtml" />
     <Content Include="Views\StoreFront\Index.cshtml" />
     <Content Include="Views\AddToCart\Index.cshtml" />
     <Content Include="Views\AddToCart\CartSummary.cshtml" />
     <Content Include="Views\CheckOut\AddressAndPayment.cshtml" />
     <Content Include="Views\CheckOut\Complete.cshtml" />
-=======
-    <Content Include="Views\ShoppingCart\MyCart.cshtml" />
-    <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Products\EachProductDetails.cshtml" />
->>>>>>> bc0854a3c9fb5ead10f74bf7c09d9bc7b1eaa3fc
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

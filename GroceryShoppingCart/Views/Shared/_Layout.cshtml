@@ -26,6 +26,7 @@
 
                     @if (Request.IsAuthenticated && User.IsInRole("Admin"))
                      {
+<<<<<<< HEAD
                       <li class="dropdown">
                       <a class="dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" href="#">
                         Admin Area <span class="carer"></span>
@@ -37,6 +38,19 @@
                       </ul>
                      </li>
                      }
+=======
+                        <li class="dropdown">
+                            <a class="dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" href="#">
+                                Admin Area <span class="carer"></span></a>
+                            <ul class=" dropdown-menu">
+                                <li>@Html.ActionLink("Catagories","Index","Catagories")</li>
+                                <li>@Html.ActionLink("Product","Products","Products")</li>
+                                <li>@Html.ActionLink("Orders","Index","Orders")</li>
+                            </ul>
+                        </li>
+                     }
+                    <li>@Html.ActionLink("Products", "Index", "Products")</li>
+>>>>>>> bc0854a3c9fb5ead10f74bf7c09d9bc7b1eaa3fc
                     <li class="dropdown">
                         <a class="dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" href="#">
                             About us
@@ -54,12 +68,24 @@
                 </form>
                 
                 <ul class="nav navbar-nav">
+<<<<<<< HEAD
                     <li>@{Html.RenderAction("CartSummary", "AddTOCart");}</li>
                    
                  </ul>
 
                     @Html.Partial("_LoginPartial")
 </div>
+=======
+                    <li class="active">
+                        <a href="@Url.Action("MyCart", "ShoppingCart")">
+                            <span class="glyphicon glyphicon-shopping-cart" style="color:green"></span>Cart <span class="badge">@Session["count"]</span>
+                        </a>
+                    </li>
+                </ul>
+
+                @Html.Partial("_LoginPartial")
+            </div>
+>>>>>>> bc0854a3c9fb5ead10f74bf7c09d9bc7b1eaa3fc
         </div>
     </div>
     <div class="container body-content">

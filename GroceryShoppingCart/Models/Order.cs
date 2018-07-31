@@ -49,6 +49,27 @@ namespace GroceryShoppingCart.Models
         [StringLength(24)]
         public string Phone { get; set; }
 
+<<<<<<< HEAD
+=======
+        [Display(Name = "Experation Date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime Experation { get; set; }
+
+        [Display(Name = "Credit Card")]
+        [NotMapped]
+        [Required]
+        [DataType(DataType.CreditCard)]
+        public String CreditCard { get; set; }
+
+        [Display(Name = "Credit Card Type")]
+        [NotMapped]
+        public String CcType { get; set; }
+
+        public bool SaveInfo { get; set; }
+
+
+>>>>>>> bc0854a3c9fb5ead10f74bf7c09d9bc7b1eaa3fc
         [DisplayName("Email Address")]
         [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}",
             ErrorMessage = "Email is is not valid.")]

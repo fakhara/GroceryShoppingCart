@@ -20,14 +20,7 @@ namespace GroceryShoppingCart.Controllers
                 return View(db.Products.ToList());
             }
         }
-        public ActionResult EachProductDetails(int id)
-        {
-            using (ApplicationDbContext db = new ApplicationDbContext())
-            {
-                var product = db.Products.SingleOrDefault(i => i.Id == id);
-                return View(product);
-            }
-        }
+        
         //Get: Products/AddProduct
         [HttpGet]
         [Authorize(Roles = "Admin")]

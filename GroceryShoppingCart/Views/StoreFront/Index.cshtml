@@ -131,36 +131,39 @@
             @if (Model.Name == "Seasoning & Spice")
              {
               <li class="active">
-              <a href="~/StoreFront/Index/11">Seasoning & Spice</a>
+              <a href="~/StoreFront/Index/12">Seasoning & Spice</a>
               </li>
              }
              else
              {
               <li>
-              <a href="~/StoreFront/Index/11">Seasoning & Spice</a>
+              <a href="~/StoreFront/Index/12">Seasoning & Spice</a>
               </li>
              }
         </ul>
     </div>
-    @if (Model != null)
-     {
-        
+    <div class="col-xs-12 col-md-9">
         <div class="row">
-            @foreach (var product in Model.Products)
+            @foreach(var product in Model.Products)
              {
-                
-                    <div class="col-md-4">
-                    <h4><span id="productname" style="color:darkred">@product.Name</span></h4>
-                    <p><span class="glyphicon glyphicon-heart" style="color:red;pointer-events:fill;" contextmenu="Added to WishList"></span></p>
-               
-                    <a href="@Url.Action("EachProductDetails", "Products", new {id = product.Id })">
-                    <img class="a.photo" src="~/Images/Uploads/Products//@product.Id/Thumbs/@product.ImageName" style="overflow:hidden;position:relative;width:200px;height:200px;cursor:pointer" />
-                    </a>
+                <div class="col-xs-12 col-md-3">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="~/Images/Uploads/Products//@product.Id/Thumbs/@product.ImageName" style="overflow:hidden;position:relative;width:200px;height:200px;cursor:pointer" />
+                    <div class="caption text-center">
+                        <p>
+                            <b>Name:</b><span>@product.Name</span>
+                        </p>
+                        <p>
+                            <b>Price:</b><span>@product.Price</span>
+                        </p>
+                        <p class="text-center">
+                            @Html.ActionLink("Add to cart", "Add", "AddToCart", new { id = product.Id }, new { @class = "btn btn-info" })
+                        </p>
+                    </div>
                 </div>
-         
-             }
               </div>
-        
-     }
+             }
+        </div>
+    </div>
   </div>
-
+   

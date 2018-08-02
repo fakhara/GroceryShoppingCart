@@ -1117,7 +1117,6 @@
     <Content Include="Views\AddToCart\CartSummary.cshtml" />
     <Content Include="Views\CheckOut\AddressAndPayment.cshtml" />
     <Content Include="Views\CheckOut\Complete.cshtml" />
-    <Content Include="Views\Products\EachProductDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

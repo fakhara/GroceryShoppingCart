@@ -253,6 +253,7 @@
     <Content Include="Content\image\personalcareIcon.png" />
     <Content Include="Content\image\seasoningsspices.png" />
     <Content Include="Content\image\shoping_cart.png" />
+    <Content Include="Content\image\shoptown.jpg" />
     <Content Include="Content\image\spicesicon.png" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />

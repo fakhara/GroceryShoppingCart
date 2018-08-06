@@ -1,26 +1,10 @@
 ﻿@{
     ViewBag.Title = "Welcome";
 }
-<style>
-    .mySlides {
-        display: none;
-    }
-</style>
-<div class=" container" style="max-width:1000px">
-    <img class="mySlides" src="~/Content/image/foodGrocery.png" style="width:100%" />
-    <img class="mySlides" src="~/Content/image/Beverage.png" style="width:100%" />
-    <img class="mySlides" src="~/Content/image/bread.png" style="width:100%" />
-    <img class="mySlides" src="~/Content/image/dairyproducts.png" style="width:100%" />
-    <img class="mySlides" src="~/Content/image/dryfruit.png" style="width:100%" />
-    <img class="mySlides" src="~/Content/image/frozenfood.png" style="width:100%" />
-    <img class="mySlides" src="~/Content/image/clearner.png" style="width:100%" />
-    <img class="mySlides" src="~/Content/image/personalCare.png" style="width:100%" />
-    <img class="mySlides" src="~/Content/image/fruitvegetables.png" style="width:100%" />
-    <img class="mySlides" src="/Content/image/babycareProducts.png" style="width:100%" />
-    <img class="mySlides" src="~/Content/image/seasoningsspices.png" style="width:100%" />
-</div>
-<br />
 
+<div class="jumbotron" style="padding:0">
+<img src="~/Content/image/shoptown.jpg" style="width:100%" />
+</div>
 <h3 class="text-center">Click on a category below to get started</h3>
 <br />
 
@@ -114,44 +98,3 @@
         </div>
     </div>
 </div>
-<hr/>
-<style>
-    #map{
-        height:400px;
-        width:100%;
-    }
-</style>
-Add Google Map
-<div class="row">
-    <div id="map"></div>
-    <script>
-        var map;
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 56.879004, lng: 14.805852},
-                zoom: 16
-            });
-            var marker = new google.maps.Marker({
-                position: { lat: 56.879004, lng: 14.805852 },
-                map: map
-            });
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=initMap" async defer></script>
-</div>
-<script>
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) { myIndex = 1 }
-            x[myIndex - 1].style.display = "block";
-            setTimeout(carousel, 6000); // Change image every 6 seconds
-        }
-</script>

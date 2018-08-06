@@ -111,7 +111,6 @@ namespace GroceryShoppingCart.Controllers
         {
             if (ModelState.IsValid)
             {
-                order.OrderId = id;
                 db.Entry(order).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");

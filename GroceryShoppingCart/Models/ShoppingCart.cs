@@ -42,6 +42,31 @@ namespace GroceryShoppingCart.Models
             }
             db.SaveChanges();
         }
+        public int UpdateCartCount(int id, int cartCount)
+        {
+            // Get the cart 
+            var cartItem = db.Carts.Single(
+                cart => cart.CartId == ShoppingCartId
+                && cart.ID == id);
+
+            int itemCount = 0;
+
+            if (cartItem != null)
+            {
+                if (cartCount > 0)
+                {
+                    cartItem.Count = cartCount;
+                    itemCount = cartItem.Count;
+                }
+                else
+                {
+                    db.Carts.Remove(cartItem);
+                }
+                // Save changes 
+                db.SaveChanges();
+            }
+            return itemCount;
+        }
         public int RemoveFromCart(int id)
         {
             var cartItem = db.Carts.Single(cart => cart.CartId == ShoppingCartId && cart.ProductId == id);
@@ -61,6 +86,7 @@ namespace GroceryShoppingCart.Models
             }
             return itemCount;
         }
+        
         public void EmptyCart()
         {
             var cartItems = db.Carts.Where(cart => cart.CartId == ShoppingCartId);

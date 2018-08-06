@@ -107,7 +107,7 @@ namespace GroceryShoppingCart.Controllers
         // POST: Orders/Edit/id
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(Order order, int id)
+        public async Task<ActionResult> Edit(Order order)
         {
             if (ModelState.IsValid)
             {

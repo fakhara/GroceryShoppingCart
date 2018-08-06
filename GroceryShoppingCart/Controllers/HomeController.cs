@@ -29,5 +29,10 @@ namespace GroceryShoppingCart.Controllers
 
             return View();
         }
+        public ActionResult Map()
+        {
+            ViewBag.Message = "Your Store Location";
+            return View();
+        }
     }
 }

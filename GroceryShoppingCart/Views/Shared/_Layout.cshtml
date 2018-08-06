@@ -53,11 +53,7 @@
                 <form class="navbar-form navbar-left">
                     <div class="form-group"> <input type="text" class="form-control" placeholder="Search"> </div> <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
                 </form>
-                
-                @*<ul class="nav navbar-nav">
-                      <li>@{Html.RenderAction("CartSummary", "AddTOCart");}</li>
-                    </ul>*@
-
+               
                     @Html.Partial("_LoginPartial")
               </div>
 
@@ -70,9 +66,22 @@
         <hr/>
         <footer>
             <div class="container">
-            <p>&copy; @DateTime.Now.Year - GroceryShoppingCart by FakharaImran &middot;  <a href="#map"><span class="glyphicon glyphicon-map-marker"></span>Store Location</a></p>
-             </div>
-        </footer>
+                <div class="row">
+                    <div class="col-md-10 col-sm-10 col-xs-7">
+                        <a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+                        <a href="https://twitter.com/" target="_blank" class="fa fa-twitter"></a>
+                        <a href="https://www.google.se/" target="_blank" class="fa fa-google"></a>
+                        <a href="https://www.instagram.com" target="_blank" class="fa fa-instagram"></a>
+                    </div>
+                    <div class="col-md-2 col-sm-2  col-xs-5 footer-links">
+                        <ul>
+                            <li>@Html.ActionLink("Store Lacation", "Map", "Home", new { @class = "linkColor" })<span class="glyphicon glyphicon-map-marker"></span></li>
+                        </ul>
+                    </div>
+                    <p>&copy; @DateTime.Now.Year - GroceryShoppingCart by FakharaImran </p>
+                </div>
+           </div>
+       </footer>
     </div>
 
 

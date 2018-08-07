@@ -49,7 +49,7 @@ namespace GroceryShoppingCart.Controllers
                     orders = orders.OrderBy(s => s.FirstName);
                     break;
             }
-            int pageSize = 3;
+            int pageSize = 5;
             int pageNumber = (page ?? 1);
             return View(orders.ToPagedList(pageNumber,pageSize));
             //return View(await db.Orders.ToListAsync());

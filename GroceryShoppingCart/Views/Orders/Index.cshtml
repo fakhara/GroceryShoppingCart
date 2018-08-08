@@ -8,10 +8,11 @@
 }
 
 <h2>Orders </h2>
+<div class="row"style="background-color:gainsboro">
 <div class="bs-docs-section">
     <div class="row">
         @using (Html.BeginForm("Index", "Orders", FormMethod.Get))
-        {
+         {
             <div class="form-group">
                 <div class="input-group">
                     <span class="input-group-addon">Find:</span>
@@ -21,7 +22,7 @@
                     </span>
                 </div>
             </div>
-        }
+         }
     </div>
 </div>
 
@@ -99,7 +100,6 @@
             </td>
             <td>
                 @Html.ActionLink("Edit ", "Edit", new { id = item.OrderId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.OrderId }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.OrderId })
             </td>
         </tr>
@@ -110,3 +110,4 @@ Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.Page
 
 @Html.PagedListPager(Model, page => Url.Action("Index",
 new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+</div>

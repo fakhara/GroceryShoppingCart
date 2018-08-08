@@ -15,6 +15,7 @@ namespace GroceryShoppingCart.Controllers
     {
         ApplicationDbContext db = new ApplicationDbContext();
         // GET: Orders
+        [Authorize(Roles = "Admin")]
         public ActionResult Index(string sortOrder,string currentFilter,string searchString, int? page)
         {
             ViewBag.CurrentSort = sortOrder;
@@ -72,6 +73,7 @@ namespace GroceryShoppingCart.Controllers
         }
         //Get: Orders/Create
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             return View();
@@ -90,6 +92,7 @@ namespace GroceryShoppingCart.Controllers
             return View(order);
          }
         // GET: Orders/Edit/id
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -106,6 +109,7 @@ namespace GroceryShoppingCart.Controllers
 
         // POST: Orders/Edit/id
         [HttpPost]
+
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(Order order)
         {
@@ -118,6 +122,7 @@ namespace GroceryShoppingCart.Controllers
             return View(order);
         }
         // GET: Orders/Delete/
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)

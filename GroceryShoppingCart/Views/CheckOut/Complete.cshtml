@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Checkout Complete";
 }
+<div class="row" style="background-color:gainsboro">
 <h2>Congratulations!!! Your Order is Placed Successfully</h2>
 <p>Thanks for your order! Your order number is: @Model</p>
 <p>
@@ -12,3 +13,4 @@
     Check You Order Details:
     @Html.ActionLink("Order Details", "Details", "Orders", new { id = Model }, null)
 </p>
+</div>

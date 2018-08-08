@@ -66,26 +66,25 @@
         <br />
         <hr/>
         <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 col-sm-10 col-xs-7">
+            @*<div class="container">*@
+                @*<div class="row">*@
+                    @*<div class="col-md-10 col-sm-10 col-xs-7">
                         <a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
                         <a href="https://twitter.com/" target="_blank" class="fa fa-twitter"></a>
                         <a href="https://www.google.se/" target="_blank" class="fa fa-google"></a>
                         <a href="https://www.instagram.com" target="_blank" class="fa fa-instagram"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-2  col-xs-5 footer-links">
-                        <ul>
-                            <li>@Html.ActionLink("Store Lacation", "Map", "Home", new { @class = "linkColor" })<span class="glyphicon glyphicon-map-marker"></span></li>
-                        </ul>
-                    </div>
-                    <p>&copy; @DateTime.Now.Year - GroceryShoppingCart by FakharaImran </p>
-                </div>
-           </div>
+                    </div>*@
+            <div class="col-md-2 col-sm-2  col-xs-5 footer-links">
+                <ul>
+                    <li>@Html.ActionLink("Store Lacation", "Map", "Home", new { @class = "linkColor" })<span class="glyphicon glyphicon-map-marker"></span></li>
+                </ul>
+            </div>
+                <a href="#myPage" title="To Top"><span class="glyphicon glyphicon-arrow-up pull-right"></span></a>
+                <p><b>&copy; @DateTime.Now.Year - GroceryShoppingCart by FakharaImran</b> </p>
+                @*</div>*@
+           @*</div>*@
        </footer>
     </div>
-
-
-    @RenderSection("scripts", required: false)
+@RenderSection("scripts", required: false)
 </body>
 </html>

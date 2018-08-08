@@ -1,0 +1,32 @@
+﻿@model List<GroceryShoppingCart.Models.Product>
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<div class="row"style="background-color:gainsboro">
+@using (Ajax.BeginForm("Search", null,
+    new AjaxOptions
+    {
+        HttpMethod = "GET",
+        UpdateTargetId = "results",
+        InsertionMode = InsertionMode.Replace
+    }, new { id = "searchForm" }))
+ {
+     @*<input name="query" class="form-control" placeholder="Search" oninput="$('#searchForm').submit()" /> 
+     <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>*@
+    <div class="container">
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                <input name="query" placeholder="Search"oninput="$('#searchForm').submit()" class="form-control" />
+            </div>
+        </div>
+    </div>
+ }
+
+
+<div id="results">
+    @Html.Partial("_ProductsResult", Model)
+</div>
+</div>

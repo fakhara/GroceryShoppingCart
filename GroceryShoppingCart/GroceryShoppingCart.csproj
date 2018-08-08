@@ -1119,6 +1119,8 @@
     <Content Include="Views\CheckOut\AddressAndPayment.cshtml" />
     <Content Include="Views\CheckOut\Complete.cshtml" />
     <Content Include="Views\Home\Map.cshtml" />
+    <Content Include="Views\Shared\_ProductsResult.cshtml" />
+    <Content Include="Views\Home\Product.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

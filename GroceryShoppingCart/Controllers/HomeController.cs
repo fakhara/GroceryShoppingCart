@@ -29,5 +29,16 @@ namespace GroceryShoppingCart.Controllers
         {
             return View();
         }
+        public ActionResult Product()
+        {
+            var product = db.Products.ToList();
+            return View(product);
+        }
+        public ActionResult Search(string query)
+        {
+            var result = db.Products.Where(u => u.Name.ToUpper().Contains(query.ToUpper())).ToList();
+
+            return PartialView("_ProductsResult", result);
+        }
     }
 }

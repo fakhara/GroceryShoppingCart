@@ -1,0 +1,24 @@
+﻿
+@model List<GroceryShoppingCart.Models.Product>
+
+<div id="myPage" class="row" style="background-color:gainsboro">
+@foreach (var item in Model)
+ {
+<div class="col-xs-12 col-md-3">
+    <div class="thumbnail">
+        <img class="img-responsive" src="~/Images/Uploads/Products//@item.Id/Thumbs/@item.ImageName" style="overflow:hidden;position:relative;width:200px;height:200px;cursor:pointer" />
+        <div class="caption text-center">
+            <p>
+                <b>Name:</b><span>@item.Name</span>
+            </p>
+            <p>
+                <b>Price:</b><span>@item.Price</span>
+            </p>
+            <p class="text-center">
+                @Html.ActionLink("Add to cart", "Add", "AddToCart", new { id = item.Id }, new { @class = "btn btn-info" })
+            </p>
+        </div>
+    </div>
+</div>
+ }
+</div>

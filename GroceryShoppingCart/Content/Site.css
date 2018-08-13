@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    font-family:sans-serif;
+    font-family:'Comic Sans MS';
     font-size:16px;
   
 }
@@ -104,9 +104,27 @@ table.sorting.categories td {
     clear: both;
 }
 
-footer {
-    bottom: 0px;
-    width: 100%
+.footer-hr {
+   border-width:2px;
+   border-color:grey;
+}
+.footer-links li{
+    list-style:none;
+}
+a.linkColor{
+    color:grey;
+}
+.fa-facebook, fa-facebook-square{
+    color:grey;
+}
+.fa-instagram, fa-instagram-square{
+    color:grey;
+}
+.fa-twitter, fa-twitter-square {
+    color: grey;
+}
+.fa-google, fa-google-square {
+    color: grey;
 }
 .categorywrap {
     border: 1px solid green;

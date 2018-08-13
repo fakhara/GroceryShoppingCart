@@ -4,28 +4,30 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <br />
-<div class="row"style="background-color:gainsboro">
-@using (Ajax.BeginForm("Search", null,
-    new AjaxOptions
+<div class="row" style="background-color:gainsboro">
+    @using (Ajax.BeginForm("Search", null,
+        new AjaxOptions
+        {
+            HttpMethod = "Get",
+            UpdateTargetId = "results",
+            InsertionMode = InsertionMode.Replace
+        }, new { id = "searchForm" }))
     {
-        HttpMethod = "GET",
-        UpdateTargetId = "results",
-        InsertionMode = InsertionMode.Replace
-    }, new { id = "searchForm" }))
- {
-   
-    <div class="container">
-        <div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-                <input name="query" placeholder="Search"oninput="$('#searchForm').submit()" class="form-control" />
+
+        <div class="container">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                    <input name="query" placeholder="Search" oninput="$('#searchForm').submit()" class="form-control" />
+                </div>
             </div>
         </div>
-    </div>
- }
-
-
+    }
+</div>   
 <div id="results">
-    @Html.Partial("_ProductsResult", Model)
+   @Html.Partial("_ProductsResult", Model)
 </div>
-</div>
+
+
+
+

@@ -66,7 +66,7 @@ namespace GroceryShoppingCart.Controllers
             }
             //Declear product id
             int id;
-            //Init and save productDTO
+            
             using (ApplicationDbContext db = new ApplicationDbContext())
             {
                 Product product = new Product();

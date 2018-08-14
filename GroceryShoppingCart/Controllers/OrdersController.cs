@@ -91,15 +91,15 @@ namespace GroceryShoppingCart.Controllers
             }
             return View(order);
          }
-        // GET: Orders/Edit/id
-        [Authorize(Roles = "Admin")]
+        // GET: Orders/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Order order = await db.Orders.FindAsync(id);
+           
+            Order order = await db.Orders.SingleOrDefaultAsync(b => b.OrderId == id);
             if (order == null)
             {
                 return HttpNotFound();
@@ -107,17 +107,25 @@ namespace GroceryShoppingCart.Controllers
             return View(order);
         }
 
-        // POST: Orders/Edit/id
+        // POST: Orders/Edit/5
         [HttpPost]
-
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(Order order)
+        public async Task<ActionResult> Edit([Bind(Include ="OrderId,FirstName,LastName,Address,City,State,PostalCode,Country,Phone,Email")]Order order)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(order).State = EntityState.Modified;
-                await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                try
+                {
+                    db.Orders.Attach(order);
+                    db.Entry(order).State = EntityState.Modified;
+                    await db.SaveChangesAsync();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
             }
             return View(order);
         }

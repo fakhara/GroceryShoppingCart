@@ -99,7 +99,7 @@ namespace GroceryShoppingCart.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
            
-            Order order = await db.Orders.SingleOrDefaultAsync(b => b.OrderId == id);
+            Order order = await db.Orders.FindAsync(id);
             if (order == null)
             {
                 return HttpNotFound();
@@ -110,14 +110,26 @@ namespace GroceryShoppingCart.Controllers
         // POST: Orders/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include ="OrderId,FirstName,LastName,Address,City,State,PostalCode,Country,Phone,Email")]Order order)
+        public async Task<ActionResult> Edit([Bind(Include ="FirstName,LastName,Address,City,State,PostalCode,Country,Phone,Email")]Order order, int id)
         {
             if (ModelState.IsValid)
             {
+
+                Order dbOrder = db.Orders.Find(id);
+                dbOrder.FirstName = order.FirstName;
+                dbOrder.LastName = order.LastName;
+                dbOrder.Address = order.Address;
+                dbOrder.City = order.City;
+                dbOrder.State = order.State;
+                dbOrder.PostalCode = order.PostalCode;
+                dbOrder.Country = order.Country;
+                dbOrder.Phone = order.Phone;
+                dbOrder.Email = order.Email;
                 try
                 {
-                    db.Orders.Attach(order);
-                    db.Entry(order).State = EntityState.Modified;
+                    
+                    db.Orders.Attach(dbOrder);
+                    db.Entry(dbOrder).State = EntityState.Modified;
                     await db.SaveChangesAsync();
                     return RedirectToAction("Index");
                 }

@@ -92,6 +92,7 @@ namespace GroceryShoppingCart.Controllers
             return View(order);
          }
         // GET: Orders/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)

@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="row"style="background-color:gainsboro">
+<div class="row"style="background-color:gainsboro"id="dvContents" >
 <div class="container">
 <div style="background-color:white;margin-top:40px;padding:30px;">
     <h2 style="margin:20px;text-align:center;font-weight:bold;color:green;">
@@ -44,3 +44,35 @@
     }
 </table>
 </div>
+<a id="btnPrint" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-print"></span>Print</a>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrderId }) |
+    @Html.ActionLink("Back to OrderList", "Index")
+</p>
+<script type="text/javascript">
+        $(function () {
+            $("#btnPrint").click(function () {
+                var contents = $("#dvContents").html();
+                var frame1 = $('<iframe />');
+                frame1[0].name = "frame1";
+                frame1.css({ "position": "absolute", "top": "-1000000px" });
+                $("body").append(frame1);
+                var frameDoc = frame1[0].contentWindow ? frame1[0].contentWindow : frame1[0].contentDocument.document ? frame1[0].contentDocument.document : frame1[0].contentDocument;
+                frameDoc.document.open();
+                //Create a new HTML document.
+                frameDoc.document.write('<html><head><title>DIV Contents</title>');
+                frameDoc.document.write('</head><body>');
+                //Append the external CSS file.
+                frameDoc.document.write('<link href="style.css" rel="stylesheet" type="text/css" />');
+                //Append the DIV contents.
+                frameDoc.document.write(contents);
+                frameDoc.document.write('</body></html>');
+                frameDoc.document.close();
+                setTimeout(function () {
+                    window.frames["frame1"].focus();
+                    window.frames["frame1"].print();
+                    //frame1.remove();
+                }, 500);
+            });
+        });
+</script>

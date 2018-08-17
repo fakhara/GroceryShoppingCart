@@ -157,7 +157,9 @@
                             <b>Price:</b><span>@product.Price</span>
                         </p>
                         <p class="text-center">
+                            @*<a class="button" ng-click="increaseItemCount(item)">+</a>*@
                             @Html.ActionLink("Add to cart", "Add", "AddToCart", new { id = product.Id }, new { @class = "btn btn-info" })
+                            @*<a class="button" ng-click="decreaseItemCount(item)">-</a>*@
                         </p>
                     </div>
                 </div>

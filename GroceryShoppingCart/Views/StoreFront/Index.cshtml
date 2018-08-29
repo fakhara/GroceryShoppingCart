@@ -156,11 +156,14 @@
                         <p>
                             <b>Price:</b><span>@product.Price</span>
                         </p>
-                        <p class="text-center">
-                            @*<a class="button" ng-click="increaseItemCount(item)">+</a>*@
-                            @Html.ActionLink("Add to cart", "Add", "AddToCart", new { id = product.Id }, new { @class = "btn btn-info" })
-                            @*<a class="button" ng-click="decreaseItemCount(item)">-</a>*@
-                        </p>
+                        @*<form>*@<p class="text-center">
+                           @*<div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Vlaue">-</div>
+                            <input type="number" id="number" value="0" />*@
+                               @Html.ActionLink("Add to cart", "Add", "AddToCart", new { id = product.Id }, new { @class = "btn btn-info" })
+                               
+                        @*<div class="value-button" id="increase" onclick="increaseValue()" value="Increase Vlaue">+</div>
+                                   </form>*@
+                              @*</p>*@
                     </div>
                 </div>
               </div>
@@ -168,4 +171,80 @@
         </div>
     </div>
   </div>
-   
+@*<style>
+    form {
+        width: 300px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .value-button {
+        display: inline-block;
+        border: 1px solid #ddd;
+        margin: 0px;
+        width: 40px;
+        height: 20px;
+        text-align: center;
+        vertical-align: middle;
+        padding: 11px 0;
+        background: #eee;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+        .value-button:hover {
+            cursor: pointer;
+        }
+
+    form #decrease {
+        margin-right: -4px;
+        border-radius: 8px 0 0 8px;
+    }
+
+    form #increase {
+        margin-left: -4px;
+        border-radius: 0 8px 8px 0;
+    }
+
+    form #input-wrap {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    input#number {
+        text-align: center;
+        border: none;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        margin: 0px;
+        width: 40px;
+        height: 40px;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+</style>
+   <script>
+       function increaseValue() {
+           var value = parseInt(document.getElementById('number').value, 10);
+           value = isNaN(value) ? 0 : value;
+           value++;
+           document.getElementById('number').value = value;
+       }
+
+       function decreaseValue() {
+           var value = parseInt(document.getElementById('number').value, 10);
+           value = isNaN(value) ? 0 : value;
+           value < 1 ? value = 1 : '';
+           value--;
+           document.getElementById('number').value = value;
+       }
+   </script>*@

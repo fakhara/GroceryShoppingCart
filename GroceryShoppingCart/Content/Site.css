@@ -18,7 +18,9 @@
 .dl-horizontal dt {
     white-space: normal;
 }
-
+.navbar-inverse .navbar-collapse{
+    border-color:blue;
+}
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
@@ -153,6 +155,5 @@ a.linkColor{
         margin: 0 auto;
         width: 100%;
     }
-
 
 

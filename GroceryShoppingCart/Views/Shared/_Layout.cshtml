@@ -10,39 +10,41 @@
     @Scripts.Render("~/bundles/bootstrap")
 </head>
 <body>
-    <div class="bs-component">
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-header">
+    <div id="myPage" class="bs-component">
+        <div class="header">
+            <img src="~/Content/image/martshub.jpg" style="width:100%;height:150px" />
+        </div>
+        <div class="navbar navbar-inverse">
+            <div  class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("ShopTown", "Index", "Home", null, new { @class = "navbar-brand" })
+                @Html.ActionLink("MartsHub", "Index", "Home", null, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Products", "Product", "Home")</li>
+                   <li>@Html.ActionLink("Products", "Product", "Home")</li>
 
                     @if (Request.IsAuthenticated && User.IsInRole("Admin"))
-    {
+                    {
 
-                <li class="dropdown">
-                    <a class="dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" href="#">
-                        Admin Area <span class="caret"></span>
-                    </a>
-                    <ul class=" dropdown-menu">
-                        <li>@Html.ActionLink("Catagories", "Index", "Catagories")</li>
-                        <li class="divider"></li>
-                        <li>@Html.ActionLink("Product", "Products", "Products")</li>
-                        <li class="divider"></li>
-                        <li>@Html.ActionLink("Orders", "Index", "Orders")</li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" href="#">
+                                Admin Area <span class="caret"></span>
+                            </a>
+                            <ul class=" dropdown-menu">
+                                <li>@Html.ActionLink("Catagories", "Index", "Catagories")</li>
+                                <li class="divider"></li>
+                                <li>@Html.ActionLink("Product", "Products", "Products")</li>
+                                <li class="divider"></li>
+                                <li>@Html.ActionLink("Orders", "Index", "Orders")</li>
 
 
-                    </ul>
-                </li>
-}
+                            </ul>
+                        </li>
+                    }
                     <li class="dropdown">
                         <a class="dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" href="#">
                             About us
@@ -55,8 +57,8 @@
                         </ul>
                     </li>
                 </ul>
-                  @Html.Partial("_LoginPartial")
-              </div>
+                @Html.Partial("_LoginPartial")
+            </div>
 
         </div>
     </div>
@@ -64,7 +66,7 @@
         @RenderBody()
         <br />
         <br />
-        <hr class="footer-hr"/>
+        <hr class="footer-hr" />
         <footer class="footer">
             <!--Footer Elements-->
             <div class="container">
@@ -95,15 +97,16 @@
                             <i class="fa fa-dribbble"> </i>
                         </a>
                     </li>
-                   <li>@Html.ActionLink("Store Lacation", "Map", "Home", new { @class = "linkColor" })<span class="glyphicon glyphicon-map-marker"></span></li>
+                    <li>@Html.ActionLink("Store Lacation", "Map", "Home", new { @class = "linkColor" })<span class="glyphicon glyphicon-map-marker"></span></li>
                 </ul>
             </div>
-        <div class="footer-copyright text-center py-3">
+            <div class="footer-copyright text-center py-3">
                 <p><b>&copy; @DateTime.Now.Year - GroceryShoppingCart by FakharaImran</b> </p>
                 <a href="#myPage" title="To Top"><span class="glyphicon glyphicon-arrow-up pull-right"></span></a>
-         </div>
-     </footer>
-   </div>
-@RenderSection("scripts", required: false)
+            </div>
+        </footer>
+    </div>
+   
+    @RenderSection("scripts", required: false)
 </body>
 </html>

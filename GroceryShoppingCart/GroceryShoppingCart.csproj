@@ -249,6 +249,7 @@
     <Content Include="Content\image\FruitVegetablesIcon.png" />
     <Content Include="Content\image\delete.png" />
     <Content Include="Content\image\loading1.png" />
+    <Content Include="Content\image\martshub.jpg" />
     <Content Include="Content\image\personalCare.png" />
     <Content Include="Content\image\personalcareIcon.png" />
     <Content Include="Content\image\seasoningsspices.png" />

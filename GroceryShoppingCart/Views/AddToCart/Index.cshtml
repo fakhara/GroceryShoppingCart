@@ -3,10 +3,11 @@
     ViewBag.Title = "Shopping Cart";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
 <div class="row"style="background-color:gainsboro">
-@*@Html.ValidationSummary(true)*@
+
 @using (Html.BeginForm())
 {
     <h3 class="text-left"><span><img src="~/Content/image/shoping_cart.png" />Your shopping cart</span></h3>

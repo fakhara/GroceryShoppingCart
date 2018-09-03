@@ -19,7 +19,7 @@ else
 {
   <ul class="nav navbar-nav navbar-right">
     <li class="active">@{Html.RenderAction("CartSummary", "AddTOCart");}</li>
-    <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-    <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class= "glyphicon glyphicon - user" })</li>
+    <li>@Html.ActionLink("Login", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "glyphicon glyphicon-log-in" })</li>
   </ul>
 }

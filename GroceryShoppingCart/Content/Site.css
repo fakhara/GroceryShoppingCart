@@ -107,14 +107,14 @@ table.sorting.categories td {
 }
 
 .footer-hr {
-   border-width:2px;
-   border-color:grey;
+   border-width:5px;
+   border-color:gray;
 }
 .footer-links li{
     list-style:none;
 }
 a.linkColor{
-    color:grey;
+    color:gray;
 }
 .fa-facebook, fa-facebook-square{
     color:grey;

@@ -2,249 +2,223 @@
 @{
     ViewBag.Title = @Model.Name;
 }
-<br/>
-<br/>
 
-<div class="row"style="background-color:gainsboro">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+<br />
+<br />
+
+<div class="row" style="background-color:gainsboro">
     <div class="col-xs-12 col-md-3">
         <ul class="nav nav-pills nav-stacked">
             @if (Model.Name == "Food & Grocery")
-             {
-              <li class="active">
-              <a href="~/StoreFront/Index/1">Food & Grocery</a>
-              </li>
-             }
-             else
-             {
-              <li>
-              <a href="~/StoreFront/Index/1">Food & Grocery</a>
-              </li>
-             }
+            {
+                <li class="active">
+                    <a href="~/StoreFront/Index/1">Food & Grocery</a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="~/StoreFront/Index/1">Food & Grocery</a>
+                </li>
+            }
             @if (Model.Name == "Beverages")
-             {
-              <li class="active">
-              <a href="~/StoreFront/Index/2">Beverages</a>
-              </li>
-             }
-             else
-             {
-              <li>
-              <a href="~/StoreFront/Index/2">Beverages</a>
-              </li>
-             }
+            {
+                <li class="active">
+                    <a href="~/StoreFront/Index/2">Beverages</a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="~/StoreFront/Index/2">Beverages</a>
+                </li>
+            }
             @if (Model.Name == "Bread & Bakrey")
-             {
-              <li class="active">
-              <a href="~/StoreFront/Index/3">Bread & Bakrey</a>
-              </li>
-             }
-             else
-             {
-              <li>
-              <a href="~/StoreFront/Index/3">Bread & Bakrey</a>
-              </li>
-             }
+            {
+                <li class="active">
+                    <a href="~/StoreFront/Index/3">Bread & Bakrey</a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="~/StoreFront/Index/3">Bread & Bakrey</a>
+                </li>
+            }
             @if (Model.Name == "Dairy Products")
-             {
-              <li class="active">
-              <a href="~/StoreFront/Index/4">Dairy Products</a>
-              </li>
-             }
-             else
-             {
-              <li>
-              <a href="~/StoreFront/Index/4">Dairy Products</a>
-              </li>
-             }
+            {
+                <li class="active">
+                    <a href="~/StoreFront/Index/4">Dairy Products</a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="~/StoreFront/Index/4">Dairy Products</a>
+                </li>
+            }
             @if (Model.Name == "Dry Products")
-             {
-              <li class="active">
-              <a href="~/StoreFront/Index/5">Dry Products</a>
-              </li>
-             }
-             else
-             {
-              <li>
-              <a href="~/StoreFront/Index/5">Dry Products</a>
-              </li>
-             }
+            {
+                <li class="active">
+                    <a href="~/StoreFront/Index/5">Dry Products</a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="~/StoreFront/Index/5">Dry Products</a>
+                </li>
+            }
             @if (Model.Name == "Frozen/Produced Products")
-             {
-             <li class="active">
-              <a href="~/StoreFront/Index/6">Frozen/Produced Products</a>
-              </li>
-             }
-             else
-             {
-              <li>
-              <a href="~/StoreFront/Index/6">Frozen/Produced Products</a>
-              </li>
-             }
+            {
+                <li class="active">
+                    <a href="~/StoreFront/Index/6">Frozen/Produced Products</a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="~/StoreFront/Index/6">Frozen/Produced Products</a>
+                </li>
+            }
             @if (Model.Name == "Cleaner")
-             {
-              <li class="active">
-              <a href="~/StoreFront/Index/7">Cleaner</a>
-              </li>
-             }
-             else
-             {
-              <li>
-              <a href="~/StoreFront/Index/7">Cleaner</a>
-              </li>
-             }
+            {
+                <li class="active">
+                    <a href="~/StoreFront/Index/7">Cleaner</a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="~/StoreFront/Index/7">Cleaner</a>
+                </li>
+            }
             @if (Model.Name == "Personal Care")
-             {
-              <li class="active">
-              <a href="~/StoreFront/Index/8">Personal Care</a>
-              </li>
-             }
-             else
-             {
-              <li>
-              <a href="~/StoreFront/Index/8">Personal Care</a>
-              </li>
-             }
+            {
+                <li class="active">
+                    <a href="~/StoreFront/Index/8">Personal Care</a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="~/StoreFront/Index/8">Personal Care</a>
+                </li>
+            }
             @if (Model.Name == "Fruit & Vegetables")
-             {
-              <li class="active">
-              <a href="~/StoreFront/Index/9">Fruit & Vegetables</a>
-              </li>
-             }
-             else
-             {
-              <li>
-              <a href="~/StoreFront/Index/9">Fruit & Vegetables</a>
-              </li>
-             }
+            {
+                <li class="active">
+                    <a href="~/StoreFront/Index/9">Fruit & Vegetables</a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="~/StoreFront/Index/9">Fruit & Vegetables</a>
+                </li>
+            }
             @if (Model.Name == "Baby Products")
-             {
-              <li class="active">
-              <a href="~/StoreFront/Index/10">Baby Products</a>
-              </li>
-             }
-             else
-             {
-              <li>
-              <a href="~/StoreFront/Index/10">Baby Products</a>
-              </li>
-             }
+            {
+                <li class="active">
+                    <a href="~/StoreFront/Index/10">Baby Products</a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="~/StoreFront/Index/10">Baby Products</a>
+                </li>
+            }
             @if (Model.Name == "Seasoning & Spice")
-             {
-              <li class="active">
-              <a href="~/StoreFront/Index/12">Seasoning & Spice</a>
-              </li>
-             }
-             else
-             {
-              <li>
-              <a href="~/StoreFront/Index/12">Seasoning & Spice</a>
-              </li>
-             }
+            {
+                <li class="active">
+                    <a href="~/StoreFront/Index/12">Seasoning & Spice</a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a href="~/StoreFront/Index/12">Seasoning & Spice</a>
+                </li>
+            }
         </ul>
     </div>
     <div class="col-xs-12 col-md-9">
         <div class="row">
-            @foreach(var product in Model.Products)
-             {
+            @foreach (var product in Model.Products)
+            {
                 <div class="col-xs-12 col-md-3">
-                <div class="thumbnail">
-                    <img class="img-responsive" src="~/Images/Uploads/Products//@product.Id/Thumbs/@product.ImageName" style="overflow:hidden;position:relative;width:100px;height:100px;cursor:pointer" />
-                    <div class="caption text-center">
-                        <p>
-                            <b>Name:</b><span>@product.Name</span>
-                        </p>
-                        <p>
-                            <b>Price:</b><span>@product.Price</span>
-                        </p>
-                        @*<form>*@<p class="text-center">
-                           @*<div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Vlaue">-</div>
-                            <input type="number" id="number" value="0" />*@
-                               @Html.ActionLink("Add to cart", "Add", "AddToCart", new { id = product.Id }, new { @class = "btn btn-info" })
-                               
-                        @*<div class="value-button" id="increase" onclick="increaseValue()" value="Increase Vlaue">+</div>
-                                   </form>*@
-                              @*</p>*@
+                    <div class="thumbnail">
+                        <img class="img-responsive" src="~/Images/Uploads/Products//@product.Id/Thumbs/@product.ImageName" style="overflow:hidden;position:relative;width:100px;height:100px;cursor:pointer" />
+                        <div class="caption text-center">
+                            <p>
+                                <b>Name:</b><span>@product.Name</span>
+                            </p>
+                            <p>
+                                <b>Price:</b><span>@product.Price</span>
+                            </p>
+                           @*<div class="row">
+                                <div class="col-xs-3 col-xs-offset-3">
+                                    <div class="input-group number-spinner">
+                                         <span class="input-group-btn">
+                                               <button class="btn btn-default" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                          </span>
+                                          <input type="text" class="form-control text-center" value="1">
+                                           <span class="input-group-btn">
+                                                <button class="btn btn-default" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                            </span>
+                                        </div>
+                                    </div>
+                             </div>*@
+                                <p class="text-center">
+                                    @Html.ActionLink("Add to cart", "Add", "AddToCart", new { id = product.Id }, new { @class = "btn btn-info" })
+                                </p>
+                            </div>
                     </div>
                 </div>
-              </div>
              }
         </div>
     </div>
-  </div>
-@*<style>
-    form {
-        width: 300px;
-        margin: 0 auto;
-        text-align: center;
-        padding-top: 50px;
-    }
+</div>
+@*<script>
+    $(document).on('click', '.number-spinner button', function () {
+        var btn = $(this),
+            oldValue = btn.closest('.number-spinner').find('input').val().trim(),
+            newVal = 0;
 
-    .value-button {
-        display: inline-block;
-        border: 1px solid #ddd;
-        margin: 0px;
-        width: 40px;
-        height: 20px;
-        text-align: center;
-        vertical-align: middle;
-        padding: 11px 0;
-        background: #eee;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-        .value-button:hover {
-            cursor: pointer;
+        if (btn.attr('data-dir') == 'up') {
+            newVal = parseInt(oldValue) + 1;
+        } else {
+            if (oldValue > 1) {
+                newVal = parseInt(oldValue) - 1;
+            } else {
+                newVal = 1;
+            }
         }
-
-    form #decrease {
-        margin-right: -4px;
-        border-radius: 8px 0 0 8px;
+        btn.closest('.number-spinner').find('input').val(newVal);
+    });
+</script>
+<style>
+    .input-group{
+        position:relative;
     }
-
-    form #increase {
-        margin-left: -4px;
-        border-radius: 0 8px 8px 0;
+    .input-group-btn:last-child>.btn,.input-group-btn:last-child>.btn-default{
+        margin-left:0;
     }
-
-    form #input-wrap {
-        margin: 0px;
-        padding: 0px;
+    .input-group span.data-up{
+        position:absolute;
+        top:0;
     }
-
-    input#number {
-        text-align: center;
-        border: none;
-        border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
-        margin: 0px;
-        width: 40px;
-        height: 40px;
+    .input-group span.data-dwn{
+        position:absolute;
+        bottom:0;
     }
-
-    input[type=number]::-webkit-inner-spin-button,
-    input[type=number]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
+    .form-control.text-center{
+        margin:20px 0;
     }
-
-</style>
-   <script>
-       function increaseValue() {
-           var value = parseInt(document.getElementById('number').value, 10);
-           value = isNaN(value) ? 0 : value;
-           value++;
-           document.getElementById('number').value = value;
-       }
-
-       function decreaseValue() {
-           var value = parseInt(document.getElementById('number').value, 10);
-           value = isNaN(value) ? 0 : value;
-           value < 1 ? value = 1 : '';
-           value--;
-           document.getElementById('number').value = value;
-       }
-   </script>*@
+</style>*@

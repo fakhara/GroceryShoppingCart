@@ -48,12 +48,13 @@
                         <td align="right" style="padding:0px 5px 0px 5px;">
                             @*id="item-count-@item.ID">
                                 @item.Count*@
-                            @Html.TextBoxFor(model => model.CartItems[ix].Count,
+                            @Html.EditorFor(model => model.CartItems[ix].Count,
                                          new
                                          {
-                                             style = "width:30px; text-align:right;",
+                                             style = "width:20px; text-align:center;",
                                              onkeyup = "clearUpdateMessage();",
-                                             onchange = "clearUpdateMessage();"
+                                             onchange = "clearUpdateMessage();",
+                                            
                                          })
                         </td>
                         <td>

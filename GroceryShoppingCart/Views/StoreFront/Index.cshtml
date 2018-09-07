@@ -162,19 +162,7 @@
                             <p>
                                 <b>Price:</b><span>@product.Price</span>
                             </p>
-                           @*<div class="row">
-                                <div class="col-xs-3 col-xs-offset-3">
-                                    <div class="input-group number-spinner">
-                                         <span class="input-group-btn">
-                                               <button class="btn btn-default" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
-                                          </span>
-                                          <input type="text" class="form-control text-center" value="1">
-                                           <span class="input-group-btn">
-                                                <button class="btn btn-default" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
-                                            </span>
-                                        </div>
-                                    </div>
-                             </div>*@
+                           
                                 <p class="text-center">
                                     @Html.ActionLink("Add to cart", "Add", "AddToCart", new { id = product.Id }, new { @class = "btn btn-info" })
                                 </p>
@@ -185,40 +173,3 @@
         </div>
     </div>
 </div>
-@*<script>
-    $(document).on('click', '.number-spinner button', function () {
-        var btn = $(this),
-            oldValue = btn.closest('.number-spinner').find('input').val().trim(),
-            newVal = 0;
-
-        if (btn.attr('data-dir') == 'up') {
-            newVal = parseInt(oldValue) + 1;
-        } else {
-            if (oldValue > 1) {
-                newVal = parseInt(oldValue) - 1;
-            } else {
-                newVal = 1;
-            }
-        }
-        btn.closest('.number-spinner').find('input').val(newVal);
-    });
-</script>
-<style>
-    .input-group{
-        position:relative;
-    }
-    .input-group-btn:last-child>.btn,.input-group-btn:last-child>.btn-default{
-        margin-left:0;
-    }
-    .input-group span.data-up{
-        position:absolute;
-        top:0;
-    }
-    .input-group span.data-dwn{
-        position:absolute;
-        bottom:0;
-    }
-    .form-control.text-center{
-        margin:20px 0;
-    }
-</style>*@

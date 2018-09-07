@@ -73,7 +73,6 @@ namespace GroceryShoppingCart.Controllers
         }
         //Get: Orders/Create
         [HttpGet]
-        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             return View();

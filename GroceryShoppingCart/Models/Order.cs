@@ -56,6 +56,7 @@ namespace GroceryShoppingCart.Models
             ErrorMessage = "Email is is not valid.")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
+        [ScaffoldColumn(false)]
         public decimal TotalMoney { get; set; }
         public List<OrderDetail> OrderDetails { get; set; }
     }

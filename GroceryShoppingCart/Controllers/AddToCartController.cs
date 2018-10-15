@@ -15,7 +15,7 @@ namespace GroceryShoppingCart.Controllers
         public ActionResult Index()
         {
             var cart = ShoppingCart.GetCart(this.HttpContext);
-            // Set up our ViewModel 
+            // Set up our ViewModel C:\Users\deltagare\source\repos\GroceryShoppingCart2\GroceryShoppingCart\Controllers\AddToCartController.cs
             var viewModel = new ShoppingCartViewModel
             {
                 CartItems = cart.GetCartItems(),

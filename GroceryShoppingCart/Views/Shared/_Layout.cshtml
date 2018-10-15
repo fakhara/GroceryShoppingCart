@@ -25,26 +25,26 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                   <li>@Html.ActionLink("Products", "Product", "Home")</li>
+                    <li>@Html.ActionLink("Products", "Product", "Home")</li>
 
                     @if (Request.IsAuthenticated && User.IsInRole("Admin"))
-                     {
-                       
-                        <li class="dropdown">
-                            <a class="dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" href="#">
-                                Admin Area <span class="caret"></span>
-                            </a>
-                            <ul class=" dropdown-menu">
-                                <li>@Html.ActionLink("Catagories", "Index", "Catagories")</li>
-                                <li class="divider"></li>
-                                <li>@Html.ActionLink("Product", "Products", "Products")</li>
-                                <li class="divider"></li>
-                                <li>@Html.ActionLink("Orders", "Index", "Orders")</li>
+    {
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" href="#">
+                        Admin Area <span class="caret"></span>
+                    </a>
+                    <ul class=" dropdown-menu">
+                        <li>@Html.ActionLink("Catagories", "Index", "Catagories")</li>
+                        <li class="divider"></li>
+                        <li>@Html.ActionLink("Product", "Products", "Products")</li>
+                        <li class="divider"></li>
+                        <li>@Html.ActionLink("Orders", "Index", "Orders")</li>
 
 
-                            </ul>
-                        </li>
-                     }
+                    </ul>
+                </li>
+}
                     <li class="dropdown">
                         <a class="dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" href="#">
                             About us
@@ -56,13 +56,13 @@
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                         </ul>
                     </li>
+                    <li>@Html.ActionLink("OrderHistroy", "Details", "Orders",routeValues: null,htmlAttributes: new { id ="OrderId"})</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
-
+          </div>
         </div>
-    </div>
-    <div class="container body-content">
+   <div class="container body-content">
         @RenderBody()
         <br />
         <br />

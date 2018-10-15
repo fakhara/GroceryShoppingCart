@@ -8,7 +8,7 @@
 <div class="container">
 <div style="background-color:white;margin-top:40px;padding:30px;">
     <h2 style="margin:20px;text-align:center;font-weight:bold;color:green;">
-        Order Details
+        Order History
     </h2>
     <div class="servicesRight1">
         <table>
@@ -36,18 +36,15 @@
     </tr>
     @foreach (var item in Model.OrderDetails)
     {
-        <tr>
-            <td>@Html.DisplayFor(modelItem => item.Product.Name)</td>
-            <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
-        </tr>
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.Product.Name)</td>
+        <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
+        
+    </tr>
     }
 </table>
 </div>
 <a id="btnPrint" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-print"></span>Print</a>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.OrderId }) |
-    @Html.ActionLink("Back to OrderList", "Index")
-</p>
 <script type="text/javascript">
         $(function () {
             $("#btnPrint").click(function () {

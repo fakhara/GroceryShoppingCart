@@ -19,10 +19,16 @@ namespace GroceryShoppingCart
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
             routes.MapRoute(
+             name: "OrderDetails",
+             url: "{controller}/{action}/{id}",
+             defaults: new { controller = "Orders", action = "Details", id = UrlParameter.Optional }
+             );
+              routes.MapRoute(
                 name: "StoreLocation",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Map", id = UrlParameter.Optional }
             );
+
 
         }
     }
